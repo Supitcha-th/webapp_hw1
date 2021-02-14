@@ -201,17 +201,17 @@
     <i id="closebtn" class="fa fa-close close-btn" onclick="closeNav()"></i>
 
     <div class="wrapper-cards">
-        <div class="cards-component"><span class="cards-component__header"><i class="fas fa-bars"></i class="icon icon--backchannel"></i>
+        <div class="all-cards-container">
+            <span class="cards-component__header"><i style="display: none;" class="fas fa-bars"></i class="icon icon--backchannel"></i>
                 <h4 class="cards-component__title">backchannel</h4>
             </span>
-            <div class="cards-component__row">
-                <div>
+            <div class="small-cards-container"> <!--- this row has 2 contents -->
+                <div class="left-small-content"> <!-- 1st content -->
                     <div>
                         <ul>
-                            <li class="card-component__image>
-                                <a
-                                    to=" /story/there-are-spying-eyes-everywhere-and-now-they-share-a-brain/"
-                                href="/story/there-are-spying-eyes-everywhere-and-now-they-share-a-brain">
+                            <li class="card-component__image>">
+                                <a to=" /story/there-are-spying-eyes-everywhere-and-now-they-share-a-brain/"
+                                    href="/story/there-are-spying-eyes-everywhere-and-now-they-share-a-brain">
                                 <div>
                                     <div>
                                         <div><img
@@ -241,10 +241,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="card-component">
+
+                <div class="right-small-content"> <!--- 2nd content -->
                     <div>
                         <ul>
-                            <li class="card-component__image><a
+                            <li class="card-component__image"><a
                                     to=" /story/2034-part-ii-blackout-washington-dc/" aria-label="card link narrow"
                                 href="/story/2034-part-ii-blackout-washington-dc">
                                 <div>
@@ -267,7 +268,7 @@
                                 </div>
                                 </a>
                             </li>
-                            <li class="card-component__description>
+                            <li class="card-component__description">
                                 <a to=" /story/2034-part-ii-blackout-washington-dc/"
                                     href="/story/2034-part-ii-blackout-washington-dc">
                                     <div><span>Book Excerpt</span></div>
@@ -287,10 +288,11 @@
                     </div>
                 </div>
             </div>
-            <div class="cards-component__row">
-                <div class="cards-component__column">
-                    <div class="card-component">
-                        <div class="">
+
+            <div class="large-cards-container"> <!-- this row has 3 contents -->
+                <div class="left-large-content small-updown-container"> 
+                    <div class="up-small-content"> <!-- 3rd content -->
+                        <div>
                             <ul>
                                 <li class="card-component__image"><a
                                         to="/story/lion-polygamist-and-biofuel-scam/" aria-label="card link small"
@@ -331,8 +333,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div
-                        class="card-component">
+                    <div class="down-small-content"> <!-- 4th content -->
                         <div>
                             <div>
                                 <div id="cns-ads-slot-type-ap-native-card-0">
@@ -345,8 +346,8 @@
                                 <div></div>
                             </div>
                             <ul>
-                                <li class="card-component__image><a
-                                        to="/story/autonomous-car-chaos-2004-darpa-grand-challenge/"
+                                <li class="card-component__image">
+                                    <a to="/story/autonomous-car-chaos-2004-darpa-grand-challenge/"
                                         href="/story/autonomous-car-chaos-2004-darpa-grand-challenge">
                                         <div>
                                             <div>
@@ -383,8 +384,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="card-component">
-                    <div class="">
+                <div class="right-large-content"> <!-- 5th content -->
+                    <div>
                         <ul>
                             <li class="card-component__image"><a
                                     to="/story/covid-immunity-antibodies/" aria-label="card link text"
@@ -415,8 +416,8 @@
                     </div>
                 </div>
             </div>
-            <div class="cards-component__row">
-                <div class="card-component">
+            <div class="single-card-container"> <!-- this row has 1 content-->
+                <div class="single-content"> <!-- 6th content -->
                     <div>
                         <ul>
                             <li class="card-component__image"><a
@@ -462,16 +463,18 @@
                 </div>
             </div>
         </div>
-        <div class="most-popular-side-bar-component most-popular-side-bar-component--medium-down-show">
-            <aside class="sidebar-component sidebar-component--right" style="height:100%">
-                <div style="opacity:1">
-                    <div class="post-listing-component most-popular post-listing-component--with-border">
-                        <div class="post-listing-component__wrapper">
-                            <div class="title-bar-component title-bar-component--null"><span>
+
+        <div class="most-popular">
+            <aside>
+                <div>
+                    <div>
+                        <div class="pop-container">
+                            <div class="pop-title"><span>
                                     <h4 class="">Most Popular</h4>
-                                </span></div>
-                            <ul class="post-listing-component__list">
-                                <li class="post-listing-list-item__post"><a class="post-listing-list-item__link"
+                                </span>
+                            </div>
+                            <ul class="pop-wrapper">
+                                <li class="pop"><a class="post-listing-list-item__link"
                                         to="https://www.wired.com/story/stunning-images-of-starlings-in-flight#intcid=_wired-category-right-rail_b97176fa-26eb-4cf2-9fbc-6d52e11ce1a3_popular4-1"
                                         href="https://www.wired.com/story/stunning-images-of-starlings-in-flight#intcid=_wired-category-right-rail_b97176fa-26eb-4cf2-9fbc-6d52e11ce1a3_popular4-1">
                                         <div class="post-listing-list-item__image post-listing-list-item__image--small">
@@ -495,7 +498,7 @@
                                                     Hill</span></div>
                                         </div>
                                     </a></li>
-                                <li class="post-listing-list-item__post"><a class="post-listing-list-item__link"
+                                <li class="pop"><a class="post-listing-list-item__link"
                                         to="https://www.wired.com/story/there-are-spying-eyes-everywhere-and-now-they-share-a-brain#intcid=_wired-category-right-rail_b97176fa-26eb-4cf2-9fbc-6d52e11ce1a3_popular4-1"
                                         href="https://www.wired.com/story/there-are-spying-eyes-everywhere-and-now-they-share-a-brain#intcid=_wired-category-right-rail_b97176fa-26eb-4cf2-9fbc-6d52e11ce1a3_popular4-1">
                                         <div class="post-listing-list-item__image post-listing-list-item__image--small">
@@ -519,7 +522,7 @@
                                                     Holland Michel</span></div>
                                         </div>
                                     </a></li>
-                                <li class="post-listing-list-item__post"><a class="post-listing-list-item__link"
+                                <li class="pop"><a class="post-listing-list-item__link"
                                         to="https://www.wired.com/story/bliss-is-worst-kind-open-ended-sci-fi-film#intcid=_wired-category-right-rail_b97176fa-26eb-4cf2-9fbc-6d52e11ce1a3_popular4-1"
                                         href="https://www.wired.com/story/bliss-is-worst-kind-open-ended-sci-fi-film#intcid=_wired-category-right-rail_b97176fa-26eb-4cf2-9fbc-6d52e11ce1a3_popular4-1">
                                         <div class="post-listing-list-item__image post-listing-list-item__image--small">
@@ -543,7 +546,7 @@
                                                     Kehe</span></div>
                                         </div>
                                     </a></li>
-                            </ul><a class="link--arrow" to="/most-popular" href="/most-popular"><i
+                            </ul><a class="pop-see-more" to="/most-popular" href="/most-popular"><i
                                     class="icon icon--next-round-black"></i><span class="link__text">More
                                     Stories</span></a>
                         </div>
@@ -553,72 +556,72 @@
         </div>
     </div>
 
-    <footer><a to="/" aria-label="WIRED logo" href="/">Wired</a>
-        <ul>
-            <li><a to="https://www.facebook.com/wired" target="_blank" href="https://www.facebook.com/wired">
+    <footer><a class="footer-logo" to="/" aria-label="WIRED logo" href="/">Wired</a>
+        <ul class="social-wrapper">
+            <li class="social-li"><a to="https://www.facebook.com/wired" target="_blank" href="https://www.facebook.com/wired">
                     <img src="https://image.flaticon.com/icons/png/128/1384/1384053.png"
                         data-src="https://image.flaticon.com/icons/png/128/1384/1384053.png" alt="Facebook"
                         title="Facebook" class="lzy lazyload--done"
                         srcset="https://image.flaticon.com/icons/png/128/1384/1384053.png 4x" width="64" height="64">
                 </a></li>
-            <li><a to="http://www.twitter.com/wired" target="_blank" href="http://www.twitter.com/wired">
+            <li class="social-li"><a to="http://www.twitter.com/wired" target="_blank" href="http://www.twitter.com/wired">
                     <img src="https://image.flaticon.com/icons/png/128/1409/1409937.png"
                         data-src="https://image.flaticon.com/icons/png/128/1409/1409937.png" alt="Twitter"
                         title="Twitter" class="lzy lazyload--done"
                         srcset="https://image.flaticon.com/icons/png/128/1409/1409937.png 4x" width="64" height="64">
                 </a></li>
-            <li><a to="https://pinterest.com/wired" target="_blank" href="https://pinterest.com/wired">
+            <li class="social-li"><a to="https://pinterest.com/wired" target="_blank" href="https://pinterest.com/wired">
                     <img src="https://image.flaticon.com/icons/png/128/3256/3256020.png"
                         data-src="https://image.flaticon.com/icons/png/128/3256/3256020.png" alt="Pinterest"
                         title="Pinterest" class="lzy lazyload--done"
                         srcset="https://image.flaticon.com/icons/png/128/3256/3256020.png 4x" width="64" height="64">
                 </a></li>
-            <li><a to="http://www.youtube.com/wired" target="_blank" href="http://www.youtube.com/wired">
+            <li class="social-li"><a to="http://www.youtube.com/wired" target="_blank" href="http://www.youtube.com/wired">
                     <img src="https://image.flaticon.com/icons/png/128/1384/1384060.png"
                         data-src="https://image.flaticon.com/icons/png/128/1384/1384060.png" alt="Youtube free icon"
                         title="Youtube free icon" class="lzy lazyload--done"
                         srcset="https://image.flaticon.com/icons/png/128/1384/1384060.png 4x" width="64" height="64">
                 </a></li>
-            <li><a to="https://instagram.com/wired" target="_blank" href="https://instagram.com/wired">
+            <li class="social-li"><a to="https://instagram.com/wired" target="_blank" href="https://instagram.com/wired">
                     <img src="https://image.flaticon.com/icons/png/128/1384/1384063.png"
                         data-src="https://image.flaticon.com/icons/png/128/1384/1384063.png" alt="Instagram free icon"
                         title="Instagram free icon" class="lzy lazyload--done"
                         srcset="https://image.flaticon.com/icons/png/128/1384/1384063.png 4x" width="64" height="64">
                 </a></li>
         </ul>
-        <ul>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/subscribe/"
+        <ul class="footer-menu-wrapper">
+            <li class="footer-menu-li"><a to="https://www.wired.com/subscribe/"
                     href="https://www.wired.com/subscribe/">Subscribe</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/wired-advertising/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/wired-advertising/"
                     href="https://www.wired.com/wired-advertising/">Advertise</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/sitemap/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/sitemap/"
                     href="https://www.wired.com/sitemap/">Site Map</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/about/press/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/about/press/"
                     href="https://www.wired.com/about/press/">Press Center</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/about/faq/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/about/faq/"
                     href="https://www.wired.com/about/faq/">FAQ</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/about/accessibility-help/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/about/accessibility-help/"
                     href="https://www.wired.com/about/accessibility-help/">Accessibility Help</a></li>
-            <li class="footer__listitem--links"><a
+            <li class="footer-menu-li"><a
                     to="https://subscriptions.wired.com/pubs/N3/WIR/Register.jsp?cds_page_id=175371&amp;amp;cds_mag_code=WIR&amp;amp;id=1423757547774&amp;amp;lsid=50431012277019467&amp;amp;vid=1"
                     href="https://subscriptions.wired.com/pubs/N3/WIR/Register.jsp?cds_page_id=175371&amp;amp;cds_mag_code=WIR&amp;amp;id=1423757547774&amp;amp;lsid=50431012277019467&amp;amp;vid=1">Customer
                     Care</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/about/feedback/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/about/feedback/"
                     href="https://www.wired.com/about/feedback/">Contact Us</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/securedrop/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/securedrop/"
                     href="https://www.wired.com/securedrop/">Send a tip securely to WIRED</a></li>
-            <li class="footer__listitem--links"><a to="https://wired.com/coupons"
+            <li class="footer-menu-li"><a to="https://wired.com/coupons"
                     href="https://wired.com/coupons">Coupons</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/newsletter?sourceCode=HeaderAndFooter"
+            <li class="footer-menu-li"><a to="https://www.wired.com/newsletter?sourceCode=HeaderAndFooter"
                     href="https://www.wired.com/newsletter?sourceCode=HeaderAndFooter">Newsletters</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/wired-staff/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/wired-staff/"
                     href="https://www.wired.com/wired-staff/">Wired Staff</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/about/wired-jobs/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/about/wired-jobs/"
                     href="https://www.wired.com/about/wired-jobs/">Jobs</a></li>
-            <li class="footer__listitem--links"><a to="https://www.wired.com/about/rss_feeds/"
+            <li class="footer-menu-li"><a to="https://www.wired.com/about/rss_feeds/"
                     href="https://www.wired.com/about/rss_feeds/">RSS</a></li>
         </ul>
-        <div class="footer__legal">
+        <div class="footer-legal">
             <p>CNMN Collection</p>
             <p>© 2020 Condé Nast. All rights reserved.</p>
             <p>Use of and/or registration on any portion of this site constitutes acceptance of our

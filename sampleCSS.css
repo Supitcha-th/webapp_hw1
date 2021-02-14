@@ -14,10 +14,11 @@ div[class] {
 #main {
     transition: margin-left .5s;
 }
-
 li{
     list-style: none;
 }
+
+/*---------- header ------------*/
 .logo-hamburger{
     text-align: center;
 }
@@ -87,8 +88,106 @@ li{
     transition: 0.3s;
     cursor: pointer;
 }
-
-.sub-content{
-    
+.sub-content{  
     background-color: darkgreen;
 }
+/*---------------------------------------------*/
+
+/*---------- Content --------------*/
+.wrapper-cards{
+    background-color: #F5E6CC;
+}
+.all-cards-container{
+    margin: 5% 10%; 
+}
+.small-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "left-small-content left-small-content right-small-content right-small-content";
+  }
+  .left-small-content { margin: 2%; grid-area: left-small-content; }
+  .right-small-content { margin: 2%; grid-area: right-small-content; }
+
+.large-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "left-large-content left-large-content right-large-content right-large-content"
+      "left-large-content left-large-content right-large-content right-large-content";
+  }
+  .left-large-content { margin: 2%; grid-area: left-large-content; }
+  .right-large-content { margin: 2%; grid-area: right-large-content; }
+
+.small-updown-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "up-small-content"
+      "down-small-content";
+  } 
+  .up-small-content { margin: 2%; grid-area: up-small-content; }
+  .down-small-content { margin: 2%; grid-area: down-small-content; }
+  
+.single-content{
+    margin: 2%;
+}
+/*------------------------------------------*/
+
+/*-------- most popular -----------*/
+.most-popular{
+    padding: 5% 10%;
+    background-color: #FFB48F;
+}
+.pop-wrapper{
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+.pop{
+    width: 25%;
+    margin: 2%;
+    display: inline-block;
+}
+.pop-see-more{
+    display: block;
+    text-align: center;
+}
+/*-------------------------------------*/
+
+/*-------- footer ---------*/
+.footer-logo{
+    display: block;
+    text-align: center;
+    margin: 2%;
+}
+.social-wrapper{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.social-li{
+    display: inline-block;
+    padding: 20px;
+}
+.footer-menu-wrapper{
+    text-align: center;
+    margin: 2%;
+    padding: 0;
+}
+.footer-menu-li{
+    display: inline-block;
+}
+.footer-legal{
+    text-align: center;
+}
+/*---------------------------------*/
