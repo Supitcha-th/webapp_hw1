@@ -7,6 +7,11 @@
     <script src="https://kit.fontawesome.com/8f5a3f91f5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="sampleCSS.css">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script type="text/javascript" src="script.js"></script>
 <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
 <mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Yaowadee  Temtanapat</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
@@ -24,21 +29,21 @@
 </xml><![endif]-->
 <title></title></head>
 
-<body>
+<body id="main">
     <header class="header">
-        <div id="logo-bar" class="logo-bar">
-            <a class="logo logo--header" to="/" href="/"><i class="fab fa-hive"></i></a>
-            <div class="logo-bar__wrapper">
+        <div id="logo-bar" class="navbar navbar-light bg-light logo-bar ">
+            <a class="logo-hamburger col-1" onclick="openNav();" to="#" href="#"><i class="fas fa-bars"></i></a>
+            <div class="logo-bar_wrapper col">
                 <h1>Backchannel</h1>
             </div>
-            <div class="header_account-links">
+            <div class="header_account-links col-1">
                 <div>
-                    <div><a to="/account/sign-in/" href="/account/sign-in">Sign In</a></div>
+                    <div class="sign-in-btn"><a to="/account/sign-in/" href="/account/sign-in">Sign In</a></div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <div><a href="https://subscribe.wired.com/subscribe/splits/wired/WIR_FAILSAFE?source=HCL_WIR_MOBILE_NAVBAR_FAILSFE_0"
+            <div class="col-1">
+                <div style="display: none;">
+                    <div ><a href="https://subscribe.wired.com/subscribe/splits/wired/WIR_FAILSAFE?source=HCL_WIR_MOBILE_NAVBAR_FAILSFE_0"
                             target="_blank">
                             <img src="https://static.wired.com/projects/CM-fallbacks/www/img/cm-failsafe-subscribe-button-5-30-18.png"
                                 srcset="https://static.wired.com/projects/CM-fallbacks/www/img/cm-failsafe-subscribe-button-5-30-18.png"></a>
@@ -48,22 +53,26 @@
                                 srcset="https://static.wired.com/projects/CM-fallbacks/www/img/cm-failsafe-subscribe-button-5-30-18.png"></a>
                     </div>
                 </div>
-                <div><a target="_blank" to="#" rel="" href="#">Subscribe</a></div>
+
+                <div class="sub-btn"><a target="_blank" to="#" rel="" href="#">Subscribe</a></div>
+
             </div>
-            <button><i aria-label="Search Icon" class="fas fa-search"></i></button>
+            <button class="search-btn col-1" onclick="openNav();"><i aria-label="Search Icon" class="fas fa-search"></i></button>
         </div>
-        <nav>
-            <ul>
-                <li><a to="/category/backchannel/" href="/category/backchannel">backchannel</a></li>
-                <li><a to="/category/business/" href="/category/business">business</a></li>
-                <li><a to="/category/culture/" href="/category/culture">culture</a></li>
-                <li><a to="/category/gear/" href="/category/gear">gear</a></li>
-                <li><a to="/category/ideas/" href="/category/ideas">ideas</a></li>
-                <li><a to="/category/science/" href="/category/science">science</a></li>
-                <li><a to="/category/security/" href="/category/security">security</a></li>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <ul class="cate-bar">
+                <li class="cate-li"><a to="/category/backchannel/" href="/category/backchannel">backchannel</a></li>
+                <li class="cate-li"><a to="/category/business/" href="/category/business">business</a></li>
+                <li class="cate-li"><a to="/category/culture/" href="/category/culture">culture</a></li>
+                <li class="cate-li"><a to="/category/gear/" href="/category/gear">gear</a></li>
+                <li class="cate-li"><a to="/category/ideas/" href="/category/ideas">ideas</a></li>
+                <li class="cate-li"><a to="/category/science/" href="/category/science">science</a></li>
+                <li class="cate-li"><a to="/category/security/" href="/category/security">security</a></li>
             </ul>
         </nav>
-        <div class="panel--nav">
+
+        <div id="mySidenav" class="nav-container">
             <div class="search-form-component">
                 <form autocomplete="off">
                     <fieldset><input name="searchInput" value=""><label>Search</label><input type="submit"
@@ -72,26 +81,26 @@
             </div>
             <nav>
                 <ul>
-                    <li><a to="/category/backchannel/" href="/category/backchannel">
+                    <li class="nav-li"><a to="/category/backchannel/" href="/category/backchannel">
                         <i class="fas fa-university"></i>
                             <span>backchannel</span></a>
                     </li>
-                    <li><a to="/category/business/" href="/category/business">
+                    <li class="nav-li"><a to="/category/business/" href="/category/business">
                         <i class="fas fa-project-diagram"></i><span>business</span></a>
                     </li>
-                    <li><a to="/category/culture/" href="/category/culture">
+                    <li class="nav-li"><a to="/category/culture/" href="/category/culture">
                         <i class="fas fa-icons"></i><span>culture</span></a>
                     </li>
-                    <li><a to="/category/gear/" href="/category/gear">
+                    <li class="nav-li"><a to="/category/gear/" href="/category/gear">
                         <i class="fas fa-cogs"></i><span>gear</span></a>
                     </li>
-                    <li><a to="/category/ideas/" href="/category/ideas">
+                    <li class="nav-li"><a to="/category/ideas/" href="/category/ideas">
                         <i class="fas fa-lightbulb"></i><span>ideas</span></a>
                     </li>
-                    <li><a to="/category/science/" href="/category/science">
+                    <li class="nav-li"><a to="/category/science/" href="/category/science">
                         <i class="fas fa-rocket"></i><span>science</span></a>
                     </li>
-                    <li><a to="/category/security/" href="/category/security">
+                    <li class="nav-li"><a to="/category/security/" href="/category/security">
                         <i class="fas fa-shield-alt"></i><span>security</span></a>
                     </li>
                 </ul>
@@ -99,30 +108,31 @@
             <div>
                 <div>
                     <div>
-                        <a to="/account/sign-in/" href="/account/sign-in">Sign In</a>
+                        <a style="display: none;" to="/account/sign-in/" href="/account/sign-in">Sign In</a>
                     </div>
                 </div>
                 <ul>
-                    <li><a to="/podcasts/" title="Podcasts" href="/podcasts">Podcasts</a></li>
-                    <li><a to="/video/" title="Video" href="/video">Video</a></li>
-                    <li><a to="/category/business/artificial-intelligence/" title="Artificial Intelligence"
+                    <li class="nav-li"><a to="/podcasts/" title="Podcasts" href="/podcasts">Podcasts</a></li>
+                    <li class="nav-li"><a to="/video/" title="Video" href="/video">Video</a></li>
+                    <li class="nav-li"><a to="/category/business/artificial-intelligence/" title="Artificial Intelligence"
                             href="/category/business/artificial-intelligence">Artificial Intelligence</a>
                     </li>
-                    <li><a to="/tag/video-games/" title="Games" href="/tag/video-games">Games</a></li>
-                    <li><a to="/newsletter/" title="Newsletters" href="/newsletter">Newsletters</a></li>
-                    <li><a to="/category/magazine/" title="Magazine" href="/category/magazine">Magazine</a></li>
-                    <li><a to="/https://events.wired.com/home/" title="Events"
+                    <li class="nav-li"><a to="/tag/video-games/" title="Games" href="/tag/video-games">Games</a></li>
+                    <li class="nav-li"><a to="/newsletter/" title="Newsletters" href="/newsletter">Newsletters</a></li>
+                    <li class="nav-li"><a to="/category/magazine/" title="Magazine" href="/category/magazine">Magazine</a></li>
+                    <li class="nav-li"><a to="/https://events.wired.com/home/" title="Events"
                             href="/https://events.wired.com/home">Events</a></li>
-                    <li><a to="/category/wiredinsider/" title="Wired Insider" href="/category/wiredinsider">Wired
+                    <li class="nav-li"><a to="/category/wiredinsider/" title="Wired Insider" href="/category/wiredinsider">Wired
                             Insider</a></li>
-                    <li><a to="/coupons" title="Coupons" href="/coupons">Coupons</a></li>
+                    <li class="nav-li"><a to="/coupons" title="Coupons" href="/coupons">Coupons</a></li>
                 </ul>
             </div>
         </div>
-        <div id="newsletter-subscribe">
+
+        <div id="newsletter-subscribe" class="sub-container">
             <div>
-                <div>
-                    <div>
+                <div class="row">
+                    <div class="sub-content col">
                         <div>
                             <h4><a to="/newsletter" href="/newsletter">Get Our Longreads Newsletter</a></h4>
                             <div>
@@ -149,7 +159,7 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="sub-content col">
                         <div>
                             <h4>
                                 <a target="_blank" to="https://twitter.com/backchnnl"
@@ -169,7 +179,7 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="sub-content col">
                         <h4><a target="_blank" to="https://www.facebook.com/backchnnl/"
                                 href="https://www.facebook.com/backchnnl/">Follow Us<br>On Facebook</a>
                         </h4>
@@ -188,8 +198,7 @@
             </div>
         </div>
     </header>
-    
-    <i class="fas fa-bars"></i>
+    <i id="closebtn" class="fa fa-close close-btn" onclick="closeNav()"></i>
 
     <div class="wrapper-cards">
         <div class="cards-component"><span class="cards-component__header"><i class="fas fa-bars"></i class="icon icon--backchannel"></i>

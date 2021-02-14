@@ -10,3 +10,85 @@ div[class] {
 .fas {
     color: red;
 }
+
+#main {
+    transition: margin-left .5s;
+}
+
+li{
+    list-style: none;
+}
+.logo-hamburger{
+    text-align: center;
+}
+.sign-in-btn{
+    text-align: center;
+}
+.sub-btn{
+    text-align: center;
+    padding: 10px;
+    background-color: violet;
+}
+.cate-bar{
+    list-style-type: none;
+    width: 100%;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+.cate-li{
+    align-content: center;
+    width: 14.28%;
+    float: left;
+}
+.cate-li a{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+.cate-li a:hover{
+    background-color: #111;
+}
+.nav-container{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.nav-container::-webkit-scrollbar {
+    display: none;
+  }
+.nav-li a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.2s;
+}
+.close-btn{
+    color: red;
+    position: fixed;
+    font-size: 0;
+    margin-left: 10px;
+    margin-top: 5px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sub-content{
+    
+    background-color: darkgreen;
+}
